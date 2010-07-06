@@ -1,0 +1,12 @@
+<skin>
+	<defaultresolution>720p</defaultresolution>
+	<defaultresolutionwide>720p</defaultresolutionwide>
+	<defaultthemename>textures.xpr</defaultthemename>
+	<version>2.11</version>
+	<effectslowdown>.75</effectslowdown>
+	<credits>
+		<skinname>Media Stream</skinname>
+		<name>Coded by Jezz_X</name>
+		<name>Graphics by Team Razorfish</name>
+	</credits>
+</skin>
