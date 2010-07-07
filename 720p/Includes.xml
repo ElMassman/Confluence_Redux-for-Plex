@@ -82,7 +82,7 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container.Content(Movies) + [!IsEmpty(Skin.String(Home_Custom_Back_Movies_Folder)) + Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
+			<visible>Container.Content(Movies)</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -93,7 +93,7 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)] + [!IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder) + Skin.HasSetting(HomeMenuNoTVShowsButton)])</visible>
+			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)]</visible>
 		</control>
 	</include>
 	<include name="CommonMusicBackground">
@@ -301,6 +301,32 @@
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="WindowTitleHomeButton">
+		<control type="group">
+			<posx>20</posx>
+			<posy>0</posy>
+			<animation effect="slide" end="-270,0" time="400" tween="quadratic" easing="out" condition="Window.Next(Home)">WindowClose</animation>
+			<animation effect="slide" start="-270,0" time="400" tween="quadratic" easing="out" condition="Window.Previous(Home)">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>35</height>
+				<texture border="0,0,32,0">TitleBG.png</texture>
+			</control>
+			<control type="button">
+				<hitrect x="0" y="0" w="60" h="30" />
+				<posx>20</posx>
+				<posy>5</posy>
+				<width>25</width>
+				<height>20</height>
+				<texturenofocus>HomeIcon.png</texturenofocus>
+				<texturefocus>HomeIcon-Focus.png</texturefocus>
+				<label>-</label>
+				<onclick>ActivateWindow(Home)</onclick>
+			</control>
+		</control>
 	</include>
 	<include name="ButtonMediaSubCommonValues">
 		<height>40</height>
