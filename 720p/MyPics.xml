@@ -216,6 +216,7 @@
 				<label>$LOCALIZE[1]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasTheme(Confluence)">WindowTitleHomeButton</include>
 		<include>Clock</include>
 	</controls>
 </window>

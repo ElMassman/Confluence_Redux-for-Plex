@@ -605,7 +605,7 @@
 				<posy>0</posy>
 				<width>250</width>
 				<height>35</height>
-				<texture border="0,0,20,0">TitleBG.png</texture>
+				<texture border="0,0,32,0">TitleBG.png</texture>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
@@ -613,6 +613,7 @@
 				<label>$LOCALIZE[20314]</label>
 			</control>
 		</control>
+		<include condition="Skin.HasTheme(Confluence)">WindowTitleHomeButton</include>
 		<include>Clock</include>
 	</controls>
 </window>
