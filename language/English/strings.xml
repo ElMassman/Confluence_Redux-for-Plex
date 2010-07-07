@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <strings>
+
+  <!-- home page main label -->
+  <string id="31500">Applications</string>
+  <string id="31501">App Store</string>
+  <string id="31502">Pictures</string>  
+  <string id="31503">Music</string>	
+  <string id="31504">Movies</string>	
+  <string id="31505">TV Shows</string>	
+  <string id="31506">Videos</string>
+  <string id="31507">Weather</string>
+  <string id="31508">Quit</string>
+  <string id="31509">Help</string>
+  <string id="31510">Settings</string>
+	
   <!-- home page labels -->
   <string id="31000">Watch Your</string>
   <string id="31001">Listen To</string>
@@ -13,9 +27,9 @@
   <string id="31009">Open Your</string>
   <string id="31010">Play The</string>
   <string id="31011">Disc Drive</string>
-  <string id="31012"></string>
-  <string id="31013"></string>
-  <string id="31014"></string>
+  <string id="31012">Go To The</string>
+  <string id="31013">Get</string>
+  <string id="31014">Change Your</string>
   <string id="31015"></string>
   <string id="31016"></string>
   <string id="31017"></string>
@@ -33,12 +47,12 @@
  
   <!-- View Type labels -->
   <string id="31028">Poster Wrap</string>
-  <string id="31029">DVD list</string>
+  <string id="31029">DVD List</string>
   <string id="31030">Fanart</string>
-  <string id="31031">Full list</string>
+  <string id="31031">Full List</string>
   <string id="31032"></string>
   <string id="31033">Pic Thumbs</string>
-  <string id="31034">Wide icons</string>
+  <string id="31034">Wide Icons</string>
   <string id="31035">Details</string>
   <string id="31036">Info Wrap</string>
   <string id="31037">Image Wrap</string>
@@ -163,4 +177,12 @@
 
 
   <string id="31420">[B][COLOR=white]Plex has not detected a Disc.[/COLOR][/B][CR][CR]Please Insert a disc into your drive and try again or Cancel</string>
+
+  <!-- Sub Menu Labels -->
+  <string id="31600">Sleep System</string>
+  <string id="31601">Shutdown</string>
+  <string id="31602">Refresh Skin</string>
+  <string id="31603">Scripts</string>
+  <string id="31604">Credits</string>
+
 </strings>
