@@ -668,37 +668,41 @@
 							</control>
 						</focusedlayout>
 						<content>
+							<!-- default for Redux -->
 							<item id="1">
 								<label>3</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/video.jpg</icon>
 								<thumb>backgrounds/video.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="10">
 								<label>20342</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/movies.jpg</icon>
 								<thumb>backgrounds/movies.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="11">
 								<label>20343</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/tv.jpg</icon>
 								<thumb>backgrounds/tv.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="2">
 								<label>2</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/music.jpg</icon>
 								<thumb>backgrounds/music.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="3">
 								<label>1</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/pictures.jpg</icon>
 								<thumb>backgrounds/pictures.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="4">
 								<label>0</label>
@@ -711,6 +715,7 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/weather.jpg</icon>
 								<thumb>backgrounds/weather.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="6">
 								<label>247</label>
@@ -723,6 +728,7 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/settings.jpg</icon>
 								<thumb>backgrounds/settings.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="8">
 								<label>31011</label>
@@ -747,6 +753,57 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/help.jpg</icon>
 								<thumb>backgrounds/help.jpg</thumb>
+							</item>
+							
+							<!-- default for Confluence, Mediterran -->
+							<item id="1">
+								<label>3</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/video_confluence.jpg</icon>
+								<thumb>backgrounds/video_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="10">
+								<label>20342</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/movies_confluence.jpg</icon>
+								<thumb>backgrounds/movies_confluence.jpg</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="11">
+								<label>20343</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/tv_confluence.jpg</icon>
+								<thumb>backgrounds/tv_confluence.jpg</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="2">
+								<label>2</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/music_confluence.jpg</icon>
+								<thumb>backgrounds/music_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="3">
+								<label>1</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/pictures_confluence.jpg</icon>
+								<thumb>backgrounds/pictures_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="5">
+								<label>8</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/weather_confluence.jpg</icon>
+								<thumb>backgrounds/weather_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="7">
+								<label>5</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/settings_confluence.jpg</icon>
+								<thumb>backgrounds/settings_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 						</content>
 					</control>

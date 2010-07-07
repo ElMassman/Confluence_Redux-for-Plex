@@ -95,53 +95,120 @@
 					</control>
 				</focusedlayout>
 				<content>
+					<!-- Redux Images -->
 					<item id="1">
 						<label>480</label>
 						<label2>31400</label2>
 						<onclick>ActivateWindow(AppearanceSettings)</onclick>
 						<thumb>backgrounds/settings/appearance.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="2">
 						<label>157</label>
 						<label2>31401</label2>
 						<onclick>ActivateWindow(VideosSettings)</onclick>
 						<thumb>backgrounds/settings/videos.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="3">
 						<label>2</label>
 						<label2>31402</label2>
 						<onclick>ActivateWindow(MusicSettings)</onclick>
 						<thumb>backgrounds/settings/music.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="4">
 						<label>31304</label>
 						<label2>31403</label2>
 						<onclick>ActivateWindow(PicturesSettings)</onclick>
 						<thumb>backgrounds/settings/pictures.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="5">
 						<label>8</label>
 						<label2>31404</label2>
 						<onclick>ActivateWindow(WeatherSettings)</onclick>
 						<thumb>backgrounds/settings/weather.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="6">
 						<label>705</label>
 						<label2>31405</label2>
 						<onclick>ActivateWindow(NetworkSettings)</onclick>
 						<thumb>backgrounds/settings/network.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="7">
 						<label>13000</label>
 						<label2>31406</label2>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 						<thumb>backgrounds/settings/system.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="8">
 						<label>166</label>
 						<label2>31407</label2>
 						<onclick>ActivateWindow(1111)</onclick>
 						<thumb>backgrounds/settings/skinsetting.jpg</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					
+					<!-- Confluence, Mediterran Images -->
+					<item id="1">
+						<label>480</label>
+						<label2>31400</label2>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/appearance.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="2">
+						<label>157</label>
+						<label2>31401</label2>
+						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/videos.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="3">
+						<label>2</label>
+						<label2>31402</label2>
+						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/music.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="4">
+						<label>31304</label>
+						<label2>31403</label2>
+						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/pictures.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="5">
+						<label>8</label>
+						<label2>31404</label2>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/weather.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="6">
+						<label>705</label>
+						<label2>31405</label2>
+						<onclick>ActivateWindow(NetworkSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/network.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="7">
+						<label>13000</label>
+						<label2>31406</label2>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<thumb>backgrounds/settings_confluence/system.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="8">
+						<label>166</label>
+						<label2>31407</label2>
+						<onclick>ActivateWindow(1111)</onclick>
+						<thumb>backgrounds/settings_confluence/skinsetting.jpg</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 				</content>
 			</control>

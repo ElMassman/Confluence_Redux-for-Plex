@@ -20,7 +20,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/video.jpg</texture>
-			<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
+			<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)] + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -28,7 +28,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/tv.jpg</texture>
-			<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+			<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -36,7 +36,31 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/movies.jpg</texture>
-			<visible>[Container.Content(Movies)]</visible>
+			<visible>[Container.Content(Movies)] + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/video_confluence.jpg</texture>
+			<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)] + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/tv_confluence.jpg</texture>
+			<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/movies_confluence.jpg</texture>
+			<visible>[Container.Content(Movies)] + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -47,6 +71,7 @@
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
+			<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)] + !IsEmpty(Skin.String(Home_Custom_Back_Video_Folder))</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -78,6 +103,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/music.jpg</texture>
+			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/music_confluence.jpg</texture>
+			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -97,6 +131,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/pictures.jpg</texture>
+			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/pictures_confluence.jpg</texture>
+			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -165,6 +208,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/weather.jpg</texture>
+			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/weather_confluence.jpg</texture>
+			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -197,6 +249,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/settings.jpg</texture>
+			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/settings_confluence.jpg</texture>
+			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
