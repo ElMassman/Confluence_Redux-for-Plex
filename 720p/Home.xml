@@ -729,7 +729,7 @@
 						<thumb>backgrounds/weather.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+						<visible>[!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))] + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="6">
 						<label>31507</label>
@@ -740,6 +740,16 @@
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
+					<item id="6">
+						<label>31507</label>
+						<label2>31004</label2>
+						<onclick>ActivateWindow(Weather)</onclick>
+						<icon>special://skin/backgrounds/weather.jpg</icon>
+						<thumb>backgrounds/weather_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+						<visible>[!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))] + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
 					<item id="2">
 						<label>31506</label>
 						<label2>31000</label2>
@@ -747,7 +757,16 @@
 						<icon>special://skin/backgrounds/videos.png</icon>
 						<thumb>backgrounds/video.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoVideosButton) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="2">
+						<label>31506</label>
+						<label2>31000</label2>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<icon>special://skin/backgrounds/videos.png</icon>
+						<thumb>backgrounds/video.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)  + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="10">
 						<label>31504</label>
@@ -756,7 +775,16 @@
 						<icon>special://skin/backgrounds/videos.png</icon>
 						<thumb>backgrounds/movies.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="10">
+						<label>31504</label>
+						<label2>31000</label2>
+						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<icon>special://skin/backgrounds/videos.png</icon>
+						<thumb>backgrounds/movies_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
+						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="11">
 						<label>31505</label>
@@ -765,7 +793,16 @@
 						<icon>special://skin/backgrounds/videos.png</icon>
 						<thumb>backgrounds/tv.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="11">
+						<label>31505</label>
+						<label2>31000</label2>
+						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+						<icon>special://skin/backgrounds/videos.png</icon>
+						<thumb>backgrounds/tv_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="3">
 						<label>31503</label>
@@ -774,7 +811,16 @@
 						<icon>special://skin/backgrounds/music.jpg</icon>
 						<thumb>backgrounds/music.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicButton) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="3">
+						<label>31503</label>
+						<label2>31001</label2>
+						<onclick>ActivateWindow(Music)</onclick>
+						<icon>special://skin/backgrounds/music.jpg</icon>
+						<thumb>backgrounds/music_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoMusicButton) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="4">
 						<label>31502</label>
@@ -783,7 +829,16 @@
 						<icon>special://skin/backgrounds/pictures.jpg</icon>
 						<thumb>backgrounds/pictures.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="4">
+						<label>31502</label>
+						<label2>31002</label2>
+						<onclick>ActivateWindow(Pictures)</onclick>
+						<icon>special://skin/backgrounds/pictures.jpg</icon>
+						<thumb>backgrounds/pictures_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="8">
 						<label>31501</label>
@@ -809,6 +864,16 @@
 						<icon>special://skin/backgrounds/settings.jpg</icon>
 						<thumb>backgrounds/settings.jpg</thumb>
 						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+					</item>
+					<item id="5">
+						<label>31510</label>
+						<label2>31014</label2>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<icon>special://skin/backgrounds/settings.jpg</icon>
+						<thumb>backgrounds/settings_confluence.jpg</thumb>
+						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
+						<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 					</item>
 					<item id="99">
 						<label>31509</label>
