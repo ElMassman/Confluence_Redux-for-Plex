@@ -129,7 +129,7 @@
 	 	<font>
 			<name>font50caps_title</name>
 			<filename>TitleCaps.ttf</filename>
-			<size>50</size>
+			<size>42</size>
 		</font>
 
 	 	<font>
@@ -241,7 +241,7 @@
 	 	<font>
 			<name>font50caps_title</name>
 			<filename>Title.ttf</filename>
-			<size>42</size>
+			<size>50</size>
 		</font>
 
 	 	<font>
