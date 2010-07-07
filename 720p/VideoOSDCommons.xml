@@ -281,12 +281,72 @@
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="textbox">
+		<control type="label">
 			<posx>30</posx>
 			<posy>150</posy>
 			<width>550</width>
 			<height>140</height>
-			<label>$INFO[VideoPlayer.Season,· $LOCALIZE[20373] : ,[CR]]$INFO[VideoPlayer.Episode,· $LOCALIZE[20359] : ,[CR]]$INFO[VideoPlayer.Studio,· $LOCALIZE[572] : ,[CR]]$INFO[VideoPlayer.Director,· $LOCALIZE[20339] : ,[CR]]$INFO[VideoPlayer.Year,· $LOCALIZE[345] : ,[CR]]$INFO[VideoPlayer.RatingAndVotes,· $LOCALIZE[563] : ,[CR]]</label>
+			<label>$LOCALIZE[20373]: $INFO[VideoPlayer.Season]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font13caps</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>175</posy>
+			<width>550</width>
+			<height>140</height>
+			<label>$LOCALIZE[20359]: $INFO[VideoPlayer.Episode]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font13caps</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>200</posy>
+			<width>550</width>
+			<height>140</height>
+			<label>$LOCALIZE[572]: $INFO[VideoPlayer.Studio]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font13caps</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>225</posy>
+			<width>550</width>
+			<height>140</height>
+			<label>$LOCALIZE[20339]: $INFO[VideoPlayer.Director]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font13caps</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>250</posy>
+			<width>550</width>
+			<height>140</height>
+			<label>$LOCALIZE[345]: $INFO[VideoPlayer.Year]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<font>font13caps</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>275</posy>
+			<width>550</width>
+			<height>140</height>
+			<label>$LOCALIZE[563]: $INFO[VideoPlayer.RatingAndVotes]</label>
 			<align>left</align>
 			<aligny>top</aligny>
 			<font>font13caps</font>
@@ -437,7 +497,7 @@
 			<posy>390</posy>
 			<width>540</width>
 			<height>290</height>
-			<label>$INFO[VideoPlayer.Plot,· ,]</label>
+			<label>$INFO[VideoPlayer.Plot]</label>
 			<pagecontrol>91</pagecontrol>
 			<align>justify</align>
 			<aligny>top</aligny>
