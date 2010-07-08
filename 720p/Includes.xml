@@ -19,8 +19,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>backgrounds/video.jpg</texture>
-			<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
 		</control>
 		<control type="image">
 			<posx>0</posx>

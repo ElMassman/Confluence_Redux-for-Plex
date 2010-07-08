@@ -14,7 +14,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+			<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -31,7 +31,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(7)</visible>
+			<visible>Container(300).HasFocus(7)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -43,7 +43,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(6)</visible>
+			<visible>Container(300).HasFocus(6)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -55,7 +55,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(2)</visible>
+			<visible>Container(300).HasFocus(2)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -67,7 +67,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(10)</visible>
+			<visible>Container(300).HasFocus(10)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -79,7 +79,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(11)</visible>
+			<visible>Container(300).HasFocus(11)</visible>
 		</control>
 	
 		<control type="multiimage">
@@ -91,7 +91,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(3)</visible>
+			<visible>Container(300).HasFocus(3)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -103,7 +103,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(4)</visible>
+			<visible>Container(300).HasFocus(4)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -115,7 +115,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(1)</visible>
+			<visible>Container(300).HasFocus(1)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -127,7 +127,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(5)</visible>
+			<visible>Container(300).HasFocus(5)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -139,7 +139,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(9)</visible>
+			<visible>Container(300).HasFocus(9)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -151,7 +151,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(8)</visible>
+			<visible>Container(300).HasFocus(8)</visible>
 		</control>
 
 		<control type="multiimage">
@@ -163,7 +163,7 @@
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(99)</visible>
+			<visible>Container(300).HasFocus(99)</visible>
 		</control>
 
 		<include condition="!Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
@@ -171,11 +171,11 @@
 		<control type="group">
 			<posx>510r</posx>
 			<posy>40</posy>
-			<visible>Container(9000).HasFocus(6) + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			<visible>Container(300).HasFocus(6) + !Skin.HasSetting(homepageWeatherinfo)</visible>
 			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out">Hidden</animation>
 			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out">Visible</animation>
-			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out" condition="Container(9000).HasFocus(6)">WindowClose</animation>
-			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out" condition="Container(9000).HasFocus(6)">WindowOpen</animation>
+			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out" condition="Container(300).HasFocus(6)">WindowClose</animation>
+			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out" condition="Container(300).HasFocus(6)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-382,0" time="400" tween="quadratic" easing="out" condition="Window.IsActive(Favourites)">conditional</animation>
 			<control type="image">
 				<description>background</description>
@@ -304,12 +304,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9010</onup>
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(2)</visible>
+					<visible>Container(300).HasFocus(2)</visible>
 					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>342</label>
@@ -345,12 +345,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9011</onup>
 					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(3)</visible>
+					<visible>Container(300).HasFocus(3)</visible>
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>133</label>
@@ -391,12 +391,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9012</onup>
 					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(9)</visible>
+					<visible>Container(300).HasFocus(9)</visible>
 					<control type="button" id="90121">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13391</label>
@@ -413,17 +413,17 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9013</onup>
 					<ondown>9013</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(7)</visible>
+					<visible>Container(300).HasFocus(7)</visible>
 					<control type="button" id="90131">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31600</label>
-						<onclick>SetFocus(9000)</onclick>
-						<onclick>Control.Move(9000,2)</onclick>
+						<onclick>SetFocus(300)</onclick>
+						<onclick>Control.Move(300,2)</onclick>
 						<onclick>XBMC.SleepSystem()</onclick>
 						<visible>System.CanSuspend</visible>
 					</control>
@@ -445,12 +445,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9014</onup>
 					<ondown>9014</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(5)</visible>
+					<visible>Container(300).HasFocus(5)</visible>
 					<control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31603</label>
@@ -489,17 +489,17 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9015</onup>
 					<ondown>9015</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(300).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
 					</control>
@@ -507,7 +507,7 @@
 						<description>Button2</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
 					</control>
@@ -515,7 +515,7 @@
 						<description>Button3</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
 					</control>
@@ -523,7 +523,7 @@
 						<description>Button4</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
 					</control>
@@ -531,7 +531,7 @@
 						<description>Button5</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
 					</control>
@@ -539,7 +539,7 @@
 						<description>Button6</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
 					</control>
@@ -549,12 +549,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9016</onup>
 					<ondown>9016</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(10)</visible>
+					<visible>Container(300).HasFocus(10)</visible>
 					<control type="button" id="90161">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -586,12 +586,12 @@
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9017</onup>
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(11)</visible>
+					<visible>Container(300).HasFocus(11)</visible>
 					<control type="button" id="90171">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -631,7 +631,7 @@
 				<label>-</label>
 				<font>-</font>
 				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=4)</onfocus>
-				<onfocus>SetFocus(9000)</onfocus>
+				<onfocus>SetFocus(300)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
@@ -644,20 +644,20 @@
 				<height>1</height>
 				<label>-</label>
 				<font>-</font>
-				<onfocus>SetFocus(9000)</onfocus>
+				<onfocus>SetFocus(300)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 			</control>
-			<control type="wraplist" id="9000">
+			<control type="wraplist" id="300">
 				<posx>-20</posx>
 				<posy>0</posy>
 				<width>400</width>
 				<height>720</height>
 				<onleft>10</onleft>
 				<onright>9001</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>300</onup>
+				<ondown>300</ondown>
 				<onfocus>ActivateWindow(Videos)</onfocus>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
@@ -707,7 +707,7 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(7) | Container(9000).HasFocus(9) | [Container(9000).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+						<visible>Container(300).HasFocus(2) | Container(300).HasFocus(3) | Container(300).HasFocus(5) | Container(300).HasFocus(7) | Container(300).HasFocus(9) | [Container(300).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(300).HasFocus(10) | Container(300).HasFocus(11)</visible>
 					</control>
 				</focusedlayout>
 				<content>
@@ -848,7 +848,7 @@
 			<control type="group">
 				<posx>75</posx>
 				<posy>23</posy>
-				<visible>!Control.HasFocus(9000) + Control.HasFocus(10)</visible>
+				<visible>!Control.HasFocus(300) + Control.HasFocus(10)</visible>
 				<animation effect="fade" delay="0" start="100" end="0" time="100">Hidden</animation>
 				<animation effect="fade" reversible="false" start="0" end="100" time="500">Visible</animation>
 				<control type="label">
@@ -887,9 +887,9 @@
 				<texturenofocus>MediaSubSetNF.png</texturenofocus>
 				<texturefocus>MediaSubSet.png</texturefocus>
 				<onleft>10</onleft>
-				<onright>9000</onright>
+				<onright>300</onright>
 				<onup>10</onup>
-				<ondown>9000</ondown>
+				<ondown>300</ondown>
 			</control>
 		</control>
 		<control type="image">

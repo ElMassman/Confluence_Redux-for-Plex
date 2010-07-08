@@ -1,0 +1,38 @@
+<includes>
+	<include name="VideoCodecFlaggingConditions">
+		<control type="image">
+			<description>Codec Flag</description>
+			<width>90</width>
+			<height>33</height>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+	<include name="VideoTypeHackFlaggingConditions">
+		<control type="image">
+			<description>Codec Flag</description>
+			<width>90</width>
+			<height>33</height>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+	<include name="AudioCodecFlaggingConditions">
+		<control type="image">
+			<description>Codec Flag</description>
+			<width>90</width>
+			<height>33</height>
+			<info>Listitem.Property(mediaTag::audioCodec)</info>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+	<include name="AspectCodecFlaggingConditions">
+		<control type="image">
+			<description>Codec Flag</description>
+			<width>90</width>
+			<height>33</height>
+			<info>Listitem.Property(mediaTag::aspectRatio)</info>
+			<aspectratio>keep</aspectratio>
+		</control>
+	</include>
+</includes>
