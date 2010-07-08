@@ -711,7 +711,7 @@
 				<label>-</label>
 				<texturefocus>OSDBookMarksFO.png</texturefocus>
 				<texturenofocus>OSDBookMarksNF.png</texturenofocus>
-				<onleft>606</onleft>
+				<onleft>605</onleft>
 				<onright>701</onright>
 				<onup>100</onup>
 				<ondown>90</ondown>
@@ -828,7 +828,7 @@
 				<texturefocus>OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
 				<onleft>604</onleft>
-				<onright>606</onright>
+				<onright>700</onright>
 				<onup>803</onup>
 				<ondown>803</ondown>
 				<onclick>PlayerControl(Next)</onclick>

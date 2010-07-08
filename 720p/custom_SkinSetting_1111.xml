@@ -354,7 +354,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="205">
+				<!--<control type="radiobutton" id="205">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -366,7 +366,7 @@
 						<selected>!Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
+					</control>-->
 					<control type="label" id="206">
 						<width>750</width>
 						<height>45</height>
@@ -441,6 +441,19 @@
 						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="220">
+						<description>Hide Pictures Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoriteButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoFavoriteButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
