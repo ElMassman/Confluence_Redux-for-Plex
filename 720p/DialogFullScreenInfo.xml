@@ -1,7 +1,8 @@
 <window type="dialog" id="142">
 	<defaultcontrol always="true">603</defaultcontrol>
 	<controls>
-		<control type="group">
+		<!-- Redux -->
+ 		<control type="group">
 			<animation effect="slide" start="-400,0" end="0,0" time="400" delay="150" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-400,0" time="400" delay="150" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
@@ -28,12 +29,23 @@
 			<visible>!Skin.HasTheme(Confluence)</visible>
 		</control>
 		
+		<!-- Confluence Old -->
 		<control type="group">
 			<animation effect="slide" start="0,160" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
-			<visible>Skin.HasTheme(Confluence)</visible>
+			<!-- <visible>Skin.HasTheme(Confluence)</visible> -->
+			<visible>false</visible>
 			<include>VideoOSDInfoConfluence</include>
+		</control>
+		
+		<!-- Confluence New -->
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+			<visible>Skin.HasTheme(Confluence)</visible>
+			<include>VideoOSDInfoConfluenceNew</include>
 		</control>
 		
 		<include>Clock</include>
