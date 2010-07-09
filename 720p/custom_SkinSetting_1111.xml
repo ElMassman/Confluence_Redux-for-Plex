@@ -207,6 +207,19 @@
 						<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
 						<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
 					</control>
+					<control type="radiobutton" id="108">
+						<description>running video instead of image</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31700</label>
+						<onclick>Skin.ToggleSetting(videoInBack)</onclick>
+						<selected>!Skin.HasSetting(videoInBack)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="label" id="104">
 						<width>750</width>
 						<height>45</height>

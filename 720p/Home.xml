@@ -7,12 +7,12 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(videoInBack)</visible>
 		</control>
 
 		<!-- Backgrounds -->
 	   	<control type="group" id="200">
-	        <visible>!Player.HasVideo</visible>
+	        <visible>!Player.HasVideo | Skin.HasSetting(videoInBack)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -23,14 +23,13 @@
 				<visible>Container(9000).HasFocus(7)</visible>
 				<control type="image">
 					<texture background="true">backgrounds/power.jpg</texture>
-					<visible>!Skin.String(Home_Custom_Back_Shutdown_Folder)r</visible>
+					<visible>!Skin.String(Home_Custom_Back_Shutdown_Folder)</visible>
 				</control>
 				<control type="multiimage">
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</imagepath>
 					<timeperimage>8000</timeperimage>
 					<randomize>true</randomize>
 					<fadetime>1000</fadetime>
-					<visible>Container(9000).HasFocus(7)</visible>
 				</control>
 			</control>
 		
@@ -67,148 +66,43 @@
 			<!-- Video -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(2)</visible>
-				<control type="group">
-					<visible>!Skin.String(Home_Custom_Back_Video_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/video.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/video_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>VideoBackground</include>
 			</control>
 
 			<!-- Movies -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(10)</visible>
-				<control type="group">
-					<visible>!Skin.String(Home_Custom_Back_Movies_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/movies.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/movies_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>MovieBackground</include>
 			</control>
 		
 			<!-- TV Show -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(11)</visible>
-				<control type="group>">
-					<visible>Skin.String(Home_Custom_Back_TVShow_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/tv.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/tv_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>TVBackground</include>
 			</control>
 	
 			<!-- Music -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(3)</visible>
-				<control type="group">
-					<visible>!Skin.String(Home_Custom_Back_Music_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/music.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/music_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>CommonMusicBackground</include>
 			</control>
 
 			<!-- Picture -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(4)</visible>
-				<control type="group">
-					<visible>!Skin.String(Home_Custom_Back_Pictures_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/pictures.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/pictures_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>CommonPictureBackground</include>
 			</control>
 
 			<!-- Application -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(1)</visible>
-				<control type="image">
-					<texture background="true">backgrounds/applications.jpg</texture>
-					<visible>Skin.String(Home_Custom_Back_Programs_Folder)</visible>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>CommonProgramsBackground</include>
 			</control>
 
 			<!-- Settings -->
 			<control type="group">
 				<visible>Container(9000).HasFocus(5)</visible>
-				<control type="group">
-					<visible>!Skin.String(Home_Custom_Back_Settings_Folder)</visible>
-					<control type="image">
-						<texture background="true">backgrounds/settings.jpg</texture>
-						<visible>!Skin.HasTheme(Confluence)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">backgrounds/settings_confluence.jpg</texture>
-						<visible>Skin.HasTheme(Confluence)</visible>
-					</control>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>CommonSettingsBackground</include>
 			</control>
 				
 			<!-- PlayDisc -->
@@ -885,6 +779,7 @@
 						<label>31011</label>
 						<label2>31010</label2>
 						<onclick>PlayDVD()</onclick>
+						<visible>!System.HasMediaDVD + !Skin.HasSetting(HomeDiscDriveButtonDiscOnly)</visible>
 						<visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
 					</item>
 				</content>
