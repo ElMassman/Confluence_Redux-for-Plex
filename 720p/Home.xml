@@ -433,12 +433,6 @@
 						<onclick>XBMC.ShutDownSystem()</onclick>
 						<visible>System.CanPowerdown</visible>
 					</control>
-					<control type="button" id="90133">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>31602</label>
-						<onclick>XBMC.ReloadSkin()</onclick>
-						<visible>System.CanHibernate</visible>
-					</control>
 				</control>
 				
 				<!-- Settings Sub -->
@@ -484,6 +478,12 @@
 						<label>31604</label>
 						<onclick>ActivateWindow(Credits)</onclick>
 						<visible>False</visible>
+					</control>
+					<control type="button" id="90147">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31602</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<visible>System.CanHibernate</visible>
 					</control>
 				</control>
 				
@@ -722,14 +722,14 @@
 						<label>31504</label>
 						<label2>31000</label2>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-						<visible>Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 					</item>
 					
 					<item id="11">
 						<label>31505</label>
 						<label2>31000</label2>
 						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
-						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 					</item>
 					
 					<item id="3">

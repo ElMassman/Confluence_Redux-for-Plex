@@ -327,20 +327,20 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="215">
-						<description>enable Video Preview info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label> - $LOCALIZE[31124]</label>
-						<onclick>Skin.ToggleSetting(BigVideoInfo)</onclick>
-						<selected>Skin.HasSetting(BigVideoInfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>!Skin.HasSetting(homepageVideoinfo)</enable>
-					</control>
+					<!-- <control type="radiobutton" id="215">
+											<description>enable Video Preview info</description>
+											<width>750</width>
+											<height>40</height>
+											<font>font13</font>
+											<textcolor>grey2</textcolor>
+											<focusedcolor>white</focusedcolor>
+											<label> - $LOCALIZE[31124]</label>
+											<onclick>Skin.ToggleSetting(BigVideoInfo)</onclick>
+											<selected>Skin.HasSetting(BigVideoInfo)</selected>
+											<texturefocus>MenuItemFO.png</texturefocus>
+											<texturenofocus>MenuItemNF.png</texturenofocus>
+											<enable>!Skin.HasSetting(homepageVideoinfo)</enable>
+										</control> -->
 					<control type="radiobutton" id="203">
 						<description>enable music info</description>
 						<width>750</width>
@@ -380,7 +380,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>-->
-					<control type="label" id="206">
+					<control type="label" id="205">
 						<width>750</width>
 						<height>45</height>
 						<font>font13caps_title</font>
@@ -390,7 +390,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="206">
 						<description>Hide Videos Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -403,7 +403,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="217">
+					<control type="radiobutton" id="207">
 						<description>Hide Movies Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -412,12 +412,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(Movies)</enable>
 					</control>
-					<control type="radiobutton" id="218">
+					<control type="radiobutton" id="208">
 						<description>Hide TV Shows Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -426,12 +426,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<description>Hide Music Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -444,7 +444,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<description>Hide Pictures Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -457,8 +457,8 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="220">
-						<description>Hide Pictures Button</description>
+					<control type="radiobutton" id="211">
+						<description>Hide Favorites Button</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
@@ -470,7 +470,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="212">
 						<description>Hide Programs Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -483,7 +483,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="213">
 						<description>Hide Scripts Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -496,7 +496,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="214">
 						<description>Hide Weather Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -509,20 +509,20 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="213">
-						<description>Hide Shutdown Button</description>
+					<control type="radiobutton" id="215">
+						<description>Hide Quit Button</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31008]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31508]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="216">
 						<description>Hide Disc Drive Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -535,7 +535,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="216">
+					<control type="radiobutton" id="217">
 						<description>Hide Disc Drive Button If No Media</description>
 						<width>750</width>
 						<height>40</height>
