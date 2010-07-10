@@ -116,6 +116,9 @@
   <string id="31127">PATH TO LYRICS SCRIPT</string>
   <string id="31128">XBMC Lyrics</string>
 
+  <string id="31130">VideoOSD Layout</string>
+  <string id="31131">Video Options</string>
+
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
   <string id="31201">Categories</string>
@@ -186,5 +189,9 @@
   <string id="31604">Credits</string>
 
   <string id="31700">Play current Video in Background instead of Image/Fanart</string>
-
+  <string id="31701">Theme Default</string>
+  <string id="31702">MediaStream Redux</string>
+  <string id="31703">Confluence</string>
+  <string id="31704">Confluence Classic</string>
+  <string id="31705">Minimalistic</string>
 </strings>
