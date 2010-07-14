@@ -91,6 +91,11 @@
 			<filename>TitleCaps.ttf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Title.ttf</filename>
+			<size>16</size>
+		</font>
 	 	<font>
 			<name>font13_title</name>
 			<filename>Title.ttf</filename>
@@ -106,6 +111,11 @@
 			<filename>TitleCaps.ttf</filename>
 			<size>24</size>
 		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Title.ttf</filename>
+			<size>24</size>
+		</font>
 	 	<font>
 			<name>font28caps_title</name>
 			<filename>TitleCaps.ttf</filename>
@@ -114,6 +124,11 @@
 	 	<font>
 			<name>font30caps_title</name>
 			<filename>TitleCaps.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>Title.ttf</filename>
 			<size>30</size>
 		</font>
 	 	<font>
@@ -203,6 +218,11 @@
 			<filename>Title.ttf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Title.ttf</filename>
+			<size>16</size>
+		</font>
 	 	<font>
 			<name>font13_title</name>
 			<filename>Title.ttf</filename>
@@ -218,6 +238,11 @@
 			<filename>Title.ttf</filename>
 			<size>24</size>
 		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Title.ttf</filename>
+			<size>24</size>
+		</font>
 	 	<font>
 			<name>font28caps_title</name>
 			<filename>Title.ttf</filename>
@@ -225,6 +250,11 @@
 		</font>
 	 	<font>
 			<name>font30caps_title</name>
+			<filename>Title.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font30_title</name>
 			<filename>Title.ttf</filename>
 			<size>30</size>
 		</font>
@@ -314,6 +344,11 @@
 			<filename>Arial.ttf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Arial.ttf</filename>
+			<size>16</size>
+		</font>
 	 	<font>
 			<name>font13_title</name>
 			<filename>Arial.ttf</filename>
@@ -329,6 +364,11 @@
 			<filename>Arial.ttf</filename>
 			<size>24</size>
 		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Arial.ttf</filename>
+			<size>24</size>
+		</font>
 	 	<font>
 			<name>font28caps_title</name>
 			<filename>Arial.ttf</filename>
@@ -336,6 +376,11 @@
 		</font>
 	 	<font>
 			<name>font30caps_title</name>
+			<filename>Arial.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font30_title</name>
 			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>

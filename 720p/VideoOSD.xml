@@ -9,29 +9,130 @@
 			<onfocus>Setfocus(603)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
+		
+		<!-- videoOSD Theme Default -->
 		<control type="group">
-			<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
-			<include>VideoOSDBackground</include>
-		</control>
-		<control type="group">
-			<posx>680</posx>
-			<animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">visible</animation>
-			<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">hidden</animation>
-			<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(90)">WindowClose</animation>
-			<visible>Control.HasFocus(90) | Control.HasFocus(91)</visible>
-			<include>VideoOSDInfo</include>
-		</control>
+			<visible>![Skin.HasSetting(videoosdClassic) | Skin.HasSetting(videoosdRedux) | Skin.HasSetting(videoosdMinimalistic) | Skin.HasSetting(videoosdConfluence)]</visible>
+			<control type="group">
+				<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDBackground</include>
+				<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+			</control>
+			<control type="group">
+				<posx>680</posx>
+				<animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">visible</animation>
+				<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">hidden</animation>
+				<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(90)">WindowClose</animation>
+				<visible>[Control.HasFocus(90) | Control.HasFocus(91)] + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+				<include>VideoOSDInfo</include>
+			</control>
+			<control type="group">
+				<posx>10</posx>
+				<posy>545</posy>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDButtons</include>
+				<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+			</control>
+		
+			<!-- Confluence Bottom Info New -->
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+				<visible>Skin.HasTheme(Confluence)</visible>
+				<include>VideoOSDInfoConfluenceNew</include>
+			</control>
 
-		<control type="group">
-			<posx>10</posx>
-			<posy>545</posy>
-			<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
-			<include>VideoOSDButtons</include>
+			<!-- Confluence Upper Button Row New -->
+			<control type="group">
+				<animation effect="slide" start="0,-135" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-135" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDButtonsConfluenceNew</include>
+				<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
+			</control>
 		</control>
+		
+		<!-- videoOSD Redux -->
+		<control type="group">
+			<visible>Skin.HasSetting(videoosdRedux)</visible>
+			<control type="group">
+				<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDBackground</include>
+			</control>
+			<control type="group">
+				<posx>680</posx>
+				<animation effect="slide" start="600,0" end="0,0" time="400" tween="quadratic" easing="out">visible</animation>
+				<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out">hidden</animation>
+				<animation effect="slide" start="0,0" end="600,0" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(90)">WindowClose</animation>
+				<visible>[Control.HasFocus(90) | Control.HasFocus(91)]</visible>
+				<include>VideoOSDInfo</include>
+			</control>
+			<control type="group">
+				<posx>10</posx>
+				<posy>545</posy>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="!Window.IsVisible(142)">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDButtons</include>
+			</control>
+		</control>
+		
+		<!-- videoOSD Confluence -->
+		<control type="group">
+			<visible>Skin.HasSetting(videoosdConfluence)</visible>
+			<!-- Confluence Bottom Info New -->
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+				<include>VideoOSDInfoConfluenceNew</include>
+			</control>
+			<!-- Confluence Upper Button Row Old -->
+			<control type="group">
+				<animation effect="slide" start="0,-135" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-135" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+			</control>
+			<include>VideoOSDButtonsConfluence</include>
+		</control>
+		
+		<!-- videoOSD Classic -->
+		<control type="group">
+			<visible>Skin.HasSetting(videoosdClassic)</visible>	
+			<!-- Confluence Upper Button Row Old -->
+			<control type="group">
+				<animation effect="slide" start="0,-135" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-135" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDButtonsConfluence</include>
+			</control>
+			<!-- Confluence Bottom Info Old -->
+			<control type="group">
+				<animation effect="slide" start="0,160" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,160" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="0,160" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDInfoConfluence</include>
+			</control>
+		</control>
+		
+		<!-- videoOSD Minimalistic -->
+		<control type="group">
+			<visible>Skin.HasSetting(videoosdMinimalistic)</visible>	
+			<control type="group">
+				<animation effect="slide" start="0,60" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog)">Conditional</animation>
+				<include>VideoOSDButtonsMinimalistic</include>
+			</control>
+		</control>
+		
 		<include>Clock</include>
 	</controls>
 </window>

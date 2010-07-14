@@ -1,5 +1,5 @@
 <window id="0">
-	<defaultcontrol always="true">8999</defaultcontrol>
+	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
 	<controls>
 		<control type="videowindow">
@@ -7,175 +7,159 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(videoInBack)</visible>
 		</control>
-		<control type="multiimage">
+
+		<!-- Backgrounds -->
+	   	<control type="group" id="200">
+	        <visible>!Player.HasVideo | Skin.HasSetting(videoInBack)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-		</control>
+		
+			<!-- Shutdown -->
+			<control type="group">
+				<visible>Container(300).HasFocus(7)</visible>
+				<control type="image">
+					<texture background="true">backgrounds/power.jpg</texture>
+					<visible>!Skin.String(Home_Custom_Back_Shutdown_Folder)</visible>
+				</control>
+				<control type="multiimage">
+					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</imagepath>
+					<timeperimage>8000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+				</control>
+			</control>
+		
+			<!-- Weather -->
+			<control type="group">
+				<visible>Container(300).HasFocus(6)</visible>
+				<control type="group">
+					<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+					<control type="group">
+						<visible>!Skin.String(Home_Custom_Back_Weather_Folder)</visible>
+						<control type="image">
+							<texture background="true">backgrounds/weather.jpg</texture>
+							<visible>!Skin.HasTheme(Confluence)</visible>
+						</control>
+						<control type="image">
+							<texture background="true">backgrounds/weather_confluence.jpg</texture>
+							<visible>Skin.HasTheme(Confluence)</visible>
+						</control>    
+					</control>
+					<control type="multiimage">
+						<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+						<timeperimage>8000</timeperimage>
+						<randomize>true</randomize>
+						<fadetime>1000</fadetime>
+					</control>
+				</control>
+				
+				<control type="image">
+					<texture background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</texture>
+					<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+				</control>
+			</control>
 
-	<!-- User Customisable Backgrounds -->
+			<!-- Video -->
+			<control type="group">
+				<visible>Container(300).HasFocus(2)</visible>
+				<include>VideoBackground</include>
+			</control>
 
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(7)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(6)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(2)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(10)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(11)</visible>
-		</control>
+			<!-- Movies -->
+			<control type="group">
+				<visible>Container(300).HasFocus(10)</visible>
+				<include>MovieBackground</include>
+			</control>
+		
+			<!-- TV Show -->
+			<control type="group">
+				<visible>Container(300).HasFocus(11)</visible>
+				<include>TVBackground</include>
+			</control>
 	
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(3)</visible>
+			<!-- Music -->
+			<control type="group">
+				<visible>Container(300).HasFocus(3)</visible>
+				<include>CommonMusicBackground</include>
+			</control>
+
+			<!-- Picture -->
+			<control type="group">
+				<visible>Container(300).HasFocus(4)</visible>
+				<include>CommonPictureBackground</include>
+			</control>
+
+			<!-- Application -->
+			<control type="group">
+				<visible>Container(300).HasFocus(1)</visible>
+				<include>CommonProgramsBackground</include>
+			</control>
+
+			<!-- Settings -->
+			<control type="group">
+				<visible>Container(300).HasFocus(5)</visible>
+				<include>CommonSettingsBackground</include>
+			</control>
+				
+			<!-- PlayDisc -->
+			<control type="group">
+				<visible>Container(300).HasFocus(9)</visible>
+				<control type="image">
+					<texture background="true">backgrounds/settings.jpg</texture>
+					<visible>Skin.String(Home_Custom_Back_PlayDisc_Folder)</visible>
+				</control>
+				<control type="multiimage">
+					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</imagepath>
+					<timeperimage>8000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+				</control>
+			</control>
+
+			<!-- App Store -->
+			<control type="group">
+				<visible>Container(300).HasFocus(8)</visible>
+				<control type="image">
+					<texture background="true">backgrounds/appstroe.jpg</texture>
+					<visible>Skin.String(Home_Custom_Back_Appstore_Folder)</visible>
+				</control>
+				<control type="multiimage">
+					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Appstore_Folder)]</imagepath>
+					<timeperimage>8000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+				</control>
+			</control>
+
+			<!-- Help -->
+			<control type="group">
+				<visible>Container(300).HasFocus(99)</visible>
+				<control type="image">
+					<texture background="true">backgrounds/help.jpg</texture>
+					<visible>Skin.String(Home_Custom_Back_Help_Folder)</visible>
+				</control>
+				<control type="multiimage">
+					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Help_Folder)]</imagepath>
+					<timeperimage>8000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+				</control>
+			</control>
 		</control>
 
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(4)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(1)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(5)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(9)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Appstore_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(8)</visible>
-		</control>
-
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Help_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Container(9000).HasFocus(99)</visible>
-		</control>
-
-		<include condition="!Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
 		<!-- weather Info -->
 		<control type="group">
 			<posx>510r</posx>
 			<posy>40</posy>
-			<visible>Container(9000).HasFocus(6) + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			<visible>[Container(300).HasFocus(6) + !Skin.HasSetting(homepageWeatherinfo)] | [Skin.HasSetting(homepageWeatherinfoAlways)]</visible>
 			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out">Hidden</animation>
 			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out">Visible</animation>
-			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out" condition="Container(9000).HasFocus(6)">WindowClose</animation>
-			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out" condition="Container(9000).HasFocus(6)">WindowOpen</animation>
+			<animation effect="slide" end="0,-220" time="300" tween="quadratic" easing="out" condition="Container(300).HasFocus(6)">WindowClose</animation>
+			<animation effect="slide" start="0,-220" time="300" tween="quadratic" easing="out" condition="Container(300).HasFocus(6)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-382,0" time="400" tween="quadratic" easing="out" condition="Window.IsActive(Favourites)">conditional</animation>
 			<control type="image">
 				<description>background</description>
@@ -237,6 +221,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
+		
 		<!-- Music Info -->
 		<control type="group">
 			<posx>510r</posx>
@@ -249,6 +234,7 @@
 			<animation effect="slide" start="0,0" end="-382,0" time="400" tween="quadratic" easing="out" condition="Window.IsActive(Favourites)">conditional</animation>
 			<include>SmallMusicInfo</include>
 		</control>
+		
 		<!-- Video Info -->
 		<control type="group">
 			<posx>510r</posx>
@@ -263,9 +249,13 @@
 			<include condition="!Skin.HasSetting(BigVideoInfo)">SmallVideoInfo</include>
 			<include condition="Skin.HasSetting(BigVideoInfo)">BigVideoInfo</include>
 		</control>
+		
+		<!-- Menus -->
 		<control type="group">
 			<animation effect="slide" end="-370,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-370,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			
+			<!-- Blades -->
 			<control type="group">
 				<animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
 				<control type="image">
@@ -285,6 +275,8 @@
 					<animation effect="slide" end="228,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 				</control>
 			</control>
+			
+			<!-- Sub Menus -->
 			<control type="group" id="9001">
 				<posx>170</posx>
 				<posy>0</posy>
@@ -299,17 +291,19 @@
 					<height>50</height>
 					<texture>MediaStreamLogo.png</texture>
 				</control>
+				
+				<!-- Video Sub -->
 				<control type="grouplist" id="9010">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9010</onup>
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(2)</visible>
+					<visible>Container(300).HasFocus(2)</visible>
 					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>342</label>
@@ -340,17 +334,19 @@
 						<visible>Library.HasContent(Videos)</visible>
 					</control>
 				</control>
+				
+				<!-- Music Sub -->
 				<control type="grouplist" id="9011">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9011</onup>
 					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(3)</visible>
+					<visible>Container(300).HasFocus(3)</visible>
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>133</label>
@@ -386,17 +382,19 @@
 						<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
 					</control>
 				</control>
+				
+				<!-- Disc Sub -->
 				<control type="grouplist" id="9012">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9012</onup>
 					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(9)</visible>
+					<visible>Container(300).HasFocus(9)</visible>
 					<control type="button" id="90121">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13391</label>
@@ -408,22 +406,24 @@
 						<onclick>PlayDVD()</onclick>
 					</control>
 				</control>
+				
+				<!-- Shutdown Sub -->
 				<control type="grouplist" id="9013">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9013</onup>
 					<ondown>9013</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(7)</visible>
+					<visible>Container(300).HasFocus(7)</visible>
 					<control type="button" id="90131">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31600</label>
-						<onclick>SetFocus(9000)</onclick>
-						<onclick>Control.Move(9000,2)</onclick>
+						<onclick>SetFocus(300)</onclick>
+						<onclick>Control.Move(300,2)</onclick>
 						<onclick>XBMC.SleepSystem()</onclick>
 						<visible>System.CanSuspend</visible>
 					</control>
@@ -433,24 +433,20 @@
 						<onclick>XBMC.ShutDownSystem()</onclick>
 						<visible>System.CanPowerdown</visible>
 					</control>
-					<control type="button" id="90133">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>31602</label>
-						<onclick>XBMC.ReloadSkin()</onclick>
-						<visible>System.CanHibernate</visible>
-					</control>
-					</control>
+				</control>
+				
+				<!-- Settings Sub -->
 				<control type="grouplist" id="9014">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9014</onup>
 					<ondown>9014</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(5)</visible>
+					<visible>Container(300).HasFocus(5)</visible>
 					<control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31603</label>
@@ -483,23 +479,31 @@
 						<onclick>ActivateWindow(Credits)</onclick>
 						<visible>False</visible>
 					</control>
+					<control type="button" id="90147">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31602</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<visible>System.CanHibernate</visible>
+					</control>
 				</control>
+				
+				<!-- Script Sub -->
 				<control type="grouplist" id="9015">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9015</onup>
 					<ondown>9015</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(300).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
 					</control>
@@ -507,7 +511,7 @@
 						<description>Button2</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
 					</control>
@@ -515,7 +519,7 @@
 						<description>Button3</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
 					</control>
@@ -523,7 +527,7 @@
 						<description>Button4</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
 					</control>
@@ -531,7 +535,7 @@
 						<description>Button5</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
 					</control>
@@ -539,22 +543,24 @@
 						<description>Button6</description>
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
-						<onclick>Setfocus(9000)</onclick>
+						<onclick>Setfocus(300)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
 					</control>
 				</control>
+				
+				<!-- Movie Sub -->
 				<control type="grouplist" id="9016">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9016</onup>
 					<ondown>9016</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(10)</visible>
+					<visible>Container(300).HasFocus(10)</visible>
 					<control type="button" id="90161">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -581,17 +587,19 @@
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
 				</control>
+				
+				<!-- TV Sub -->
 				<control type="grouplist" id="9017">
 					<posx>10</posx>
 					<posy>355</posy>
 					<width>240</width>
 					<height>550</height>
-					<onleft>9000</onleft>
+					<onleft>300</onleft>
 					<onright>8000</onright>
 					<onup>9017</onup>
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(11)</visible>
+					<visible>Container(300).HasFocus(11)</visible>
 					<control type="button" id="90171">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -614,6 +622,8 @@
 					</control>
 				</control>
 			</control>
+			
+			
 			<control type="image">
 				<posx>-450</posx>
 				<posy>0</posy>
@@ -622,42 +632,17 @@
 				<colordiffuse>DAFFFFFF</colordiffuse>
 				<texture>HomeBlade.png</texture>
 			</control>
-			<control type="button" id="8999">
-				<description>Run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=4)</onfocus>
-				<onfocus>SetFocus(9000)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
-			<control type="button" id="8999">
-				<description>Don't run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<onfocus>SetFocus(9000)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
-			<control type="wraplist" id="9000">
+			
+			<!-- Main Menu -->
+			<control type="wraplist" id="300">
 				<posx>-20</posx>
 				<posy>0</posy>
 				<width>400</width>
 				<height>720</height>
 				<onleft>10</onleft>
 				<onright>9001</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>300</onup>
+				<ondown>300</ondown>
 				<onfocus>ActivateWindow(Videos)</onfocus>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
@@ -707,7 +692,7 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(5) | Container(9000).HasFocus(7) | Container(9000).HasFocus(9) | [Container(9000).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+						<visible>Container(300).HasFocus(2) | Container(300).HasFocus(3) | Container(300).HasFocus(5) | Container(300).HasFocus(7) | Container(300).HasFocus(9) | [Container(300).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(300).HasFocus(10) | Container(300).HasFocus(11)</visible>
 					</control>
 				</focusedlayout>
 				<content>
@@ -715,101 +700,72 @@
 						<label>31508</label>
 						<label2></label2>
 						<onclick>XBMC.Quit()</onclick>
-						<!-- onclick>SetFocus(9001)</onclick -->
-						<icon>special://skin/backgrounds/shutdown.png</icon>
-						<thumb>backgrounds/power.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
+						
 						<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
 					</item>
+					
 					<item id="6">
 						<label>31507</label>
 						<label2>31004</label2>
 						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>special://skin/backgrounds/weather.jpg</icon>
-						<thumb>backgrounds/weather.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-						<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
-					<item id="6">
-						<label>31507</label>
-						<label2>31004</label2>
-						<onclick>ActivateWindow(Weather)</onclick>
-						<icon>special://skin/backgrounds/weather.jpg</icon>
-						<thumb>$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-						<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
-					</item>
+					
 					<item id="2">
 						<label>31506</label>
 						<label2>31000</label2>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
-						<icon>special://skin/backgrounds/videos.png</icon>
-						<thumb>backgrounds/video.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 					</item>
+					
 					<item id="10">
 						<label>31504</label>
 						<label2>31000</label2>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-						<icon>special://skin/backgrounds/videos.png</icon>
-						<thumb>backgrounds/movies.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 					</item>
+					
 					<item id="11">
 						<label>31505</label>
 						<label2>31000</label2>
 						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
-						<icon>special://skin/backgrounds/videos.png</icon>
-						<thumb>backgrounds/tv.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
-						<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
 					</item>
+					
 					<item id="3">
 						<label>31503</label>
 						<label2>31001</label2>
 						<onclick>ActivateWindow(Music)</onclick>
-						<icon>special://skin/backgrounds/music.jpg</icon>
-						<thumb>backgrounds/music.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
+					
 					<item id="4">
 						<label>31502</label>
 						<label2>31002</label2>
 						<onclick>ActivateWindow(Pictures)</onclick>
-						<icon>special://skin/backgrounds/pictures.jpg</icon>
-						<thumb>backgrounds/pictures.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					</item>
+					
 					<item id="8">
 						<label>31501</label>
 						<label2>31012</label2>
 						<onclick>Plex.ActivateWindow(1,App Store,return)</onclick>
-						<icon>special://skin/backgrounds/scripts.png</icon>
-						<thumb>backgrounds/appstore.jpg</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 					</item>
+					
 					<item id="1">
 						<label>31500</label>
 						<label2>31003</label2>
 						<onclick>ActivateWindow(Programs)</onclick>
-						<icon>special://skin/backgrounds/programs.png</icon>
-						<thumb>backgrounds/applications.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
+					
 					<item id="5">
 						<label>31510</label>
 						<label2>31014</label2>
 						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>special://skin/backgrounds/settings.jpg</icon>
-						<thumb>backgrounds/settings.jpg</thumb>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 					</item>
+					
 					<item id="99">
 						<label>31509</label>
 						<label2>31013</label2>
@@ -818,26 +774,17 @@
 						<thumb>backgrounds/help.jpg</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 					</item>
+					
 					<item id="9">
 						<label>31011</label>
 						<label2>31010</label2>
 						<onclick>PlayDVD()</onclick>
-						<icon>special://skin/backgrounds/playdisc.png</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
-						<visible>System.HasMediaDVD</visible>
-						<visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
-					</item>
-					<item id="9">
-						<label>31011</label>
-						<label2>31010</label2>
-						<onclick>ActivateWindow(1113)</onclick>
-						<icon>special://skin/backgrounds/playdisc.png</icon>
-						<thumb>$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
 						<visible>!System.HasMediaDVD + !Skin.HasSetting(HomeDiscDriveButtonDiscOnly)</visible>
 						<visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
 					</item>
 				</content>
 			</control>
+			
 			<control type="image">
 				<posx>-450</posx>
 				<posy>0</posy>
@@ -848,7 +795,7 @@
 			<control type="group">
 				<posx>75</posx>
 				<posy>23</posy>
-				<visible>!Control.HasFocus(9000) + Control.HasFocus(10)</visible>
+				<visible>!Control.HasFocus(300) + Control.HasFocus(10)</visible>
 				<animation effect="fade" delay="0" start="100" end="0" time="100">Hidden</animation>
 				<animation effect="fade" reversible="false" start="0" end="100" time="500">Visible</animation>
 				<control type="label">
@@ -875,6 +822,7 @@
 					<label>$LOCALIZE[1036]</label>
 				</control>
 			</control>
+			
 			<control type="button" id="10">
 				<description>Favourites button</description>
 				<posx>20</posx>
@@ -887,10 +835,12 @@
 				<texturenofocus>MediaSubSetNF.png</texturenofocus>
 				<texturefocus>MediaSubSet.png</texturefocus>
 				<onleft>10</onleft>
-				<onright>9000</onright>
+				<onright>300</onright>
 				<onup>10</onup>
-				<ondown>9000</ondown>
+				<ondown>300</ondown>
+				<visible>!Skin.HasSetting(HomeMenuNoFavoriteButton)</visible>
 			</control>
+			
 		</control>
 		<control type="image">
 			<posx>1289</posx>
