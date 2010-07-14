@@ -98,6 +98,7 @@
   <string id="31126">Activer le script Lyrics sur l'OSD musique</string>
   <string id="31127">CHEMIN DU SCRIPT LYRICS</string>
   <string id="31128">XBMC Lyrics</string>
+<string id="31132">Mode Kiosque (Supprime Les Menus Des Fenêtres Média)</string>
 
   <!-- Script labels -->
   <string id="31200">Raccourcis</string>

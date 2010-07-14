@@ -118,6 +118,9 @@
 
   <string id="31130">VideoOSD Layout</string>
   <string id="31131">Video Options</string>
+  <string id="31132">Kiosk Mode (Removes Menus From Media Windows)</string>
+  <string id="31133">Always</string>
+
 
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
