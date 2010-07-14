@@ -53,24 +53,24 @@
 	</include>
 	
 	<include name="TVBackground">
-			<control type="group>">
-				<visible>!Skin.String(Home_Custom_Back_TVShow_Folder)</visible>
-				<control type="image">
-					<texture background="true">backgrounds/tv.jpg</texture>
-					<visible>!Skin.HasTheme(Confluence) | !Skin.HasTheme(Mediterran)</visible>
-				</control>
-				<control type="image">
-					<texture background="true">backgrounds/tv_confluence.jpg</texture>
-					<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
-				</control>
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_TVShow_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/tv.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence) | !Skin.HasTheme(Mediterran)</visible>
 			</control>
-			<control type="multiimage">
-				<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
-				<timeperimage>8000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>1000</fadetime>
+			<control type="image">
+				<texture background="true">backgrounds/tv_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
 			</control>
-		</include>
+		</control>
+		<control type="multiimage">
+			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+		</control>
+	</include>
 
 	<include name="CommonVideoBackground">
 		<control type="group">

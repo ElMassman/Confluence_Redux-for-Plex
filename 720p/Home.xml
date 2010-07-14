@@ -110,7 +110,7 @@
 				<visible>Container(300).HasFocus(9)</visible>
 				<control type="image">
 					<texture background="true">backgrounds/settings.jpg</texture>
-					<visible>Skin.String(Home_Custom_Back_PlayDisc_Folder)</visible>
+					<visible>!Skin.String(Home_Custom_Back_PlayDisc_Folder)</visible>
 				</control>
 				<control type="multiimage">
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</imagepath>
@@ -124,11 +124,26 @@
 			<control type="group">
 				<visible>Container(300).HasFocus(8)</visible>
 				<control type="image">
-					<texture background="true">backgrounds/appstroe.jpg</texture>
-					<visible>Skin.String(Home_Custom_Back_Appstore_Folder)</visible>
+					<texture background="true">backgrounds/appstore.jpg</texture>
+					<visible>!Skin.String(Home_Custom_Back_Appstore_Folder)</visible>
 				</control>
 				<control type="multiimage">
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Appstore_Folder)]</imagepath>
+					<timeperimage>8000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+				</control>
+			</control>
+			
+			<!-- App Store -->
+			<control type="group">
+				<visible>Container(300).HasFocus(1)</visible>
+				<control type="image">
+					<texture background="true">backgrounds/applications.jpg</texture>
+					<visible>!Skin.String(Home_Custom_Back_Programs_Folder)</visible>
+				</control>
+				<control type="multiimage">
+					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</imagepath>
 					<timeperimage>8000</timeperimage>
 					<randomize>true</randomize>
 					<fadetime>1000</fadetime>
@@ -140,7 +155,7 @@
 				<visible>Container(300).HasFocus(99)</visible>
 				<control type="image">
 					<texture background="true">backgrounds/help.jpg</texture>
-					<visible>Skin.String(Home_Custom_Back_Help_Folder)</visible>
+					<visible>!Skin.String(Home_Custom_Back_Help_Folder)</visible>
 				</control>
 				<control type="multiimage">
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Help_Folder)]</imagepath>
