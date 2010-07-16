@@ -738,14 +738,14 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/movies.jpg</icon>
 								<thumb>backgrounds/movies.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+								<visible>Library.HasContent(Movies) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="11">
 								<label>20343</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/tv.jpg</icon>
 								<thumb>backgrounds/tv.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+								<visible>Library.HasContent(TVShows) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="2">
 								<label>2</label>
@@ -825,14 +825,14 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/movies_confluence.jpg</icon>
 								<thumb>backgrounds/movies_confluence.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+								<visible>Library.HasContent(Movies) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="11">
 								<label>20343</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/tv_confluence.jpg</icon>
 								<thumb>backgrounds/tv_confluence.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+								<visible>Library.HasContent(TVShows) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="2">
 								<label>2</label>
