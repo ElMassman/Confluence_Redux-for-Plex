@@ -187,7 +187,7 @@
 			<height>720</height>
 			<texture background="true">backgrounds/applications.jpg</texture>
 			<aspectratio align="center" aligny="top">scale</aspectratio>
-			<visible>Skin.String(Home_Custom_Back_Programs_Folder)</visible>
+			<visible>!Skin.String(Home_Custom_Back_Programs_Folder)</visible>
 		</control>
 		<control type="multiimage">
 			<width>1280</width>
@@ -202,19 +202,16 @@
 	
 	<include name="CommonScriptBackground">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>backgrounds/settings.jpg</texture>
+			<texture>backgrounds/appstore.jpg</texture>
 			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<visible>!$INFO[Skin.String(Home_Custom_Back_Appstore_Folder)]</visible>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</imagepath>
+			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Appstore_Folder)]</imagepath>
 			<aspectratio align="center" aligny="top">scale</aspectratio>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
@@ -223,48 +220,46 @@
 	</include>
 	
 	<include name="CommonWeatherBackground">		
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/weather.jpg</texture>
-			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
-			<aspectratio align="center" aligny="top">scale</aspectratio>
+		<control type="group">
+			<visible>!$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</visible>
+			<control type="image">
+				<width>1280</width>
+				<height>720</height>
+				<texture>backgrounds/weather.jpg</texture>
+				<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+				<width>1280</width>
+				<height>720</height>
+				<texture>backgrounds/weather_confluence.jpg</texture>
+				<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+			</control>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/weather_confluence.jpg</texture>
-			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
-			<aspectratio align="center" aligny="top">scale</aspectratio>
-		</control>
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
-			<aspectratio align="center" aligny="top">scale</aspectratio>
-			<timeperimage>10000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
-		</control>
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</imagepath>
-			<aspectratio align="center" aligny="top">scale</aspectratio>
-			<timeperimage>10000</timeperimage>
-			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
-			<animation effect="fade" time="200">WindowClose</animation>
+		<control type="group">
+			<visible>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</visible>
+			<control type="multiimage">
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
+			</control>
+			<control type="multiimage">
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</imagepath>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
 		</control>
 	</include>
 	
