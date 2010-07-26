@@ -200,6 +200,25 @@
 		</control>
 	</include>
 	
+	<include name="CommonQuitBackground">
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">backgrounds/power.jpg</texture>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<visible>!Skin.String(Home_Custom_Back_Shutdown_Folder)</visible>
+		</control>
+		<control type="multiimage">
+			<width>1280</width>
+			<height>720</height>
+			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</imagepath>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+			<timeperimage>8000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+		</control>
+	</include>
+	
 	<include name="CommonScriptBackground">
 		<control type="image">
 			<width>1280</width>

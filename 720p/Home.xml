@@ -21,50 +21,13 @@
 			<!-- Shutdown -->
 			<control type="group">
 				<visible>Container(300).HasFocus(7)</visible>
-				<control type="image">
-					<texture background="true">backgrounds/power.jpg</texture>
-					<visible>!Skin.String(Home_Custom_Back_Shutdown_Folder)</visible>
-				</control>
-				<control type="multiimage">
-					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</imagepath>
-					<timeperimage>8000</timeperimage>
-					<randomize>true</randomize>
-					<fadetime>1000</fadetime>
-				</control>
+				<include>CommonQuitBackground</include>
 			</control>
 		
 			<!-- Weather -->
 			<control type="group">
 				<visible>Container(300).HasFocus(6)</visible>
-				<control type="group">
-					<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
-					<control type="group">
-						<visible>!Skin.String(Home_Custom_Back_Weather_Folder)</visible>
-						<control type="image">
-							<texture background="true">backgrounds/weather.jpg</texture>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<visible>!Skin.HasTheme(Confluence)</visible>
-						</control>
-						<control type="image">
-							<texture background="true">backgrounds/weather_confluence.jpg</texture>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<visible>Skin.HasTheme(Confluence)</visible>
-						</control>    
-					</control>
-					<control type="multiimage">
-						<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-						<timeperimage>8000</timeperimage>
-						<randomize>true</randomize>
-						<fadetime>1000</fadetime>
-					</control>
-				</control>
-				
-				<control type="image">
-					<texture background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</texture>
-					<aspectratio align="center" aligny="top">scale</aspectratio>
-					<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
-				</control>
+				<include>CommonWeatherBackground</include>
 			</control>
 
 			<!-- Video -->
@@ -113,11 +76,15 @@
 			<control type="group">
 				<visible>Container(300).HasFocus(9)</visible>
 				<control type="image">
+					<width>1280</width>
+					<height>720</height>
 					<texture background="true">backgrounds/settings.jpg</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!Skin.String(Home_Custom_Back_PlayDisc_Folder)</visible>
 				</control>
 				<control type="multiimage">
+					<width>1280</width>
+					<height>720</height>
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</imagepath>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<timeperimage>8000</timeperimage>
@@ -142,11 +109,17 @@
 			<control type="group">
 				<visible>Container(300).HasFocus(99)</visible>
 				<control type="image">
+					<width>1280</width>
+					<height>720</height>
 					<texture background="true">backgrounds/help.jpg</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>!Skin.String(Home_Custom_Back_Help_Folder)</visible>
 				</control>
 				<control type="multiimage">
+					<width>1280</width>
+					<height>720</height>
 					<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Help_Folder)]</imagepath>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<timeperimage>8000</timeperimage>
 					<randomize>true</randomize>
 					<fadetime>1000</fadetime>
