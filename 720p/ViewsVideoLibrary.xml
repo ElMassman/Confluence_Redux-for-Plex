@@ -1938,7 +1938,7 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
@@ -2508,13 +2508,13 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
 					<height>340</height>
 					<aspectratio aligny="top">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>30</fadetime>
 					<texture background="true" fallback="Fanart_Fallback_Small.jpg" >$INFO[ListItem.Property(fanart_image)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
@@ -2764,13 +2764,13 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
 					<height>340</height>
 					<aspectratio aligny="top">stretch</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>100</fadetime>
 					<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Property(fanart_image)]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>

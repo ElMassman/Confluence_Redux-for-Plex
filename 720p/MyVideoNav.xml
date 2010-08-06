@@ -6,7 +6,7 @@
 		<include>CommonVideoBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
-			<control type="image">
+			<control type="largeimage">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -17,7 +17,7 @@
 				<visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(508)</visible>
 				<visible>Container.Content(Movies)</visible>
 			</control>
-			<control type="image">
+			<control type="largeimage">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -28,7 +28,7 @@
 				<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(TVShows)</visible>
 			</control>
-			<control type="image">
+			<control type="largeimage">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
@@ -40,7 +40,7 @@
 				<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
 				<visible>Container.Content(Seasons) | Container.Content(Episodes)</visible>
 			</control>
-			<control type="image">
+			<control type="largeimage">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
