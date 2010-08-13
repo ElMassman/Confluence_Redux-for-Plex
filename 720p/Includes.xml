@@ -12,133 +12,144 @@
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 
-	<include name="CommonVideoBackground">
-		
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/tv.jpg</texture>
-			<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/movies.jpg</texture>
-			<visible>[Container.Content(Movies)]</visible>
+	<include name="VideoBackground">
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_Video_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/video.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence) | !Skin.HasTheme(Mediterran)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/video_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
+			</control>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		</control>
+	</include>
+	
+	<include name="MovieBackground">
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_Movies_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/movies.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence) | !Skin.HasTheme(Mediterran)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/movies_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
+			</control>
+		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>Container.Content(Movies)</visible>
+		</control>
+	</include>
+	
+	<include name="TVBackground">
+		<control type="group>">
+			<visible>Skin.String(Home_Custom_Back_TVShow_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/tv.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence) | !Skin.HasTheme(Mediterran)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/tv_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)</visible>
+			</control>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-			<visible>[Container.Content(TVShows) | Container.Content(Seasons) |Container.Content(Episodes)]</visible>
 		</control>
 	</include>
+
+	<include name="CommonVideoBackground">
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			
+			<control type="group">
+				<visible>![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)]</visible>
+				<include>VideoBackground</include>
+			</control>
+			
+			<control type="group">
+				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				<include>TVBackground</include>
+			</control>
+			
+			<control type="group">
+				<visible>Container.Content(Movies)</visible>
+				<include>MovieBackground</include>
+			</control>
+		</control>
+	</include>
+	
 	<include name="CommonMusicBackground">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/music.jpg</texture>
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_Music_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/music.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/music_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence)</visible>
+			</control>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		</control>
 	</include>
+	
 	<include name="CommonPictureBackground">		
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/pictures.jpg</texture>
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_Pictures_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/pictures.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/pictures_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence)</visible>
+			</control>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>$INFO[ListItem.Thumb]</texture>
-			<aspectratio>scale</aspectratio>
-			<visible>Control.IsVisible(510)</visible>
-		</control>
 	</include>
+	
 	<include name="CommonProgramsBackground">
-		
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/applications.jpg</texture>
+			<texture background="true">backgrounds/applications.jpg</texture>
+			<visible>!Skin.String(Home_Custom_Back_Programs_Folder)</visible>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 		</control>
 	</include>
+	
 	<include name="CommonScriptBackground">
-		
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -157,6 +168,7 @@
 			<fadetime>1000</fadetime>
 		</control>
 	</include>
+	
 	<include name="CommonWeatherBackground">		
 		<control type="image">
 			<posx>0</posx>
@@ -164,6 +176,15 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>backgrounds/weather.jpg</texture>
+			<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgrounds/weather_confluence.jpg</texture>
+			<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -189,25 +210,27 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 	</include>
+	
 	<include name="CommonSettingsBackground">		
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backgrounds/settings.jpg</texture>
+		<control type="group">
+			<visible>!Skin.String(Home_Custom_Back_Settings_Folder)</visible>
+			<control type="image">
+				<texture background="true">backgrounds/settings.jpg</texture>
+				<visible>!Skin.HasTheme(Confluence)</visible>
+			</control>
+			<control type="image">
+				<texture background="true">backgrounds/settings_confluence.jpg</texture>
+				<visible>Skin.HasTheme(Confluence)</visible>
+			</control>
 		</control>
 		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
 			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</imagepath>
-			<timeperimage>10000</timeperimage>
+			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
-		</control>
+		</control>	
 	</include>
+	
 	<include name="BehindDialogFadeOut">
 		<control type="image">
 			<posx>0</posx>

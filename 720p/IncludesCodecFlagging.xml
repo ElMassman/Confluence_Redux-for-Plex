@@ -1,38 +1,46 @@
 <includes>
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
-			<description>Codec Flag</description>
-			<width>90</width>
+			<description>Video Resolution Image</description>
+			<width min="1" max="95">auto</width>
 			<height>33</height>
-			<info>Listitem.Property(mediaTag::videoCodec)</info>
 			<aspectratio>keep</aspectratio>
+			<info>Listitem.Property(mediaTag::videoResolution)</info>
 		</control>
+		<control type="image">
+			<description>Codec Image</description>
+			<width min="1" max="95">auto</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<info>Listitem.Property(mediaTag::videoCodec)</info>
+					</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">
-		<control type="image">
-			<description>Codec Flag</description>
-			<width>90</width>
-			<height>33</height>
-			<info>Listitem.Property(mediaTag::audioChannels)</info>
-			<aspectratio>keep</aspectratio>
-		</control>
+		
 	</include>
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
-			<description>Codec Flag</description>
-			<width>90</width>
+			<description>Audio Channels Image</description>
+			<width min="1" max="95">auto</width>
 			<height>33</height>
-			<info>Listitem.Property(mediaTag::audioCodec)</info>
 			<aspectratio>keep</aspectratio>
+			<info>Listitem.Property(mediaTag::audioCodec)</info>
+		</control>
+		<control type="image">
+			<description>HDDVD Image</description>
+			<width min="1" max="95">auto</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<info>Listitem.Property(mediaTag::audioChannels)</info>
 		</control>
 	</include>
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
-			<description>Codec Flag</description>
-			<width>90</width>
+			<description>Aspectratio Image</description>
+			<width min="1" max="95">auto</width>
 			<height>33</height>
-			<info>Listitem.Property(mediaTag::aspectRatio)</info>
 			<aspectratio>keep</aspectratio>
+			<info>Listitem.Property(mediaTag::aspectRatio)</info>
 		</control>
 	</include>
 </includes>

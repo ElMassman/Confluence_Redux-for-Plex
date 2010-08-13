@@ -113,9 +113,14 @@
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
-					<item id="4">
-						<label>31116</label>
-						<label2>31200</label2>
+					<!-- <item id="4">
+										<label>31116</label>
+										<label2>31200</label2>
+										<onclick>-</onclick>
+									</item> -->
+					<item id="5">
+						<label>157</label>
+						<label2>31112</label2>
 						<onclick>-</onclick>
 					</item>
 				</content>
@@ -206,6 +211,19 @@
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(No_Media_Titles_In_Scanner)</onclick>
 						<selected>!Skin.HasSetting(No_Media_Titles_In_Scanner)</selected>
+					</control>
+					<control type="radiobutton" id="108">
+						<description>running video instead of image</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31700</label>
+						<onclick>Skin.ToggleSetting(videoInBack)</onclick>
+						<selected>!Skin.HasSetting(videoInBack)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="label" id="104">
 						<width>750</width>
@@ -314,20 +332,20 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="215">
-						<description>enable Video Preview info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label> - $LOCALIZE[31124]</label>
-						<onclick>Skin.ToggleSetting(BigVideoInfo)</onclick>
-						<selected>Skin.HasSetting(BigVideoInfo)</selected>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>!Skin.HasSetting(homepageVideoinfo)</enable>
-					</control>
+					<!-- <control type="radiobutton" id="215">
+											<description>enable Video Preview info</description>
+											<width>750</width>
+											<height>40</height>
+											<font>font13</font>
+											<textcolor>grey2</textcolor>
+											<focusedcolor>white</focusedcolor>
+											<label> - $LOCALIZE[31124]</label>
+											<onclick>Skin.ToggleSetting(BigVideoInfo)</onclick>
+											<selected>Skin.HasSetting(BigVideoInfo)</selected>
+											<texturefocus>MenuItemFO.png</texturefocus>
+											<texturenofocus>MenuItemNF.png</texturenofocus>
+											<enable>!Skin.HasSetting(homepageVideoinfo)</enable>
+										</control> -->
 					<control type="radiobutton" id="203">
 						<description>enable music info</description>
 						<width>750</width>
@@ -354,7 +372,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="205">
+				<!--<control type="radiobutton" id="205">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -366,8 +384,8 @@
 						<selected>!Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="label" id="206">
+					</control>-->
+					<control type="label" id="205">
 						<width>750</width>
 						<height>45</height>
 						<font>font13caps_title</font>
@@ -377,7 +395,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="206">
 						<description>Hide Videos Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -390,7 +408,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="217">
+					<control type="radiobutton" id="207">
 						<description>Hide Movies Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -399,12 +417,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(Movies)</enable>
 					</control>
-					<control type="radiobutton" id="218">
+					<control type="radiobutton" id="208">
 						<description>Hide TV Shows Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -413,12 +431,12 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<description>Hide Music Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -431,7 +449,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<description>Hide Pictures Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -444,7 +462,20 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="211">
+						<description>Hide Favorites Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoFavoriteButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoFavoriteButton)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="212">
 						<description>Hide Programs Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -457,7 +488,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="213">
 						<description>Hide Scripts Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -470,7 +501,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="214">
 						<description>Hide Weather Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -483,20 +514,20 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="213">
-						<description>Hide Shutdown Button</description>
+					<control type="radiobutton" id="215">
+						<description>Hide Quit Button</description>
 						<width>750</width>
 						<height>40</height>
 						<font>font13</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31111] - $LOCALIZE[31008]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31508]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="216">
 						<description>Hide Disc Drive Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -509,7 +540,7 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="216">
+					<control type="radiobutton" id="217">
 						<description>Hide Disc Drive Button If No Media</description>
 						<width>750</width>
 						<height>40</height>
@@ -668,37 +699,41 @@
 							</control>
 						</focusedlayout>
 						<content>
+							<!-- default for Redux -->
 							<item id="1">
 								<label>3</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/video.jpg</icon>
 								<thumb>backgrounds/video.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="10">
 								<label>20342</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/movies.jpg</icon>
 								<thumb>backgrounds/movies.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
+								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="11">
 								<label>20343</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/tv.jpg</icon>
 								<thumb>backgrounds/tv.jpg</thumb>
-								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + ![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="2">
 								<label>2</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/music.jpg</icon>
 								<thumb>backgrounds/music.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="3">
 								<label>1</label>
 								<onclick>-</onclick>
 								<icon>backgrounds/pictures.jpg</icon>
 								<thumb>backgrounds/pictures.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="4">
 								<label>0</label>
@@ -711,6 +746,7 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/weather.jpg</icon>
 								<thumb>backgrounds/weather.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="6">
 								<label>247</label>
@@ -723,6 +759,7 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/settings.jpg</icon>
 								<thumb>backgrounds/settings.jpg</thumb>
+								<visible>![Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 							<item id="8">
 								<label>31011</label>
@@ -747,6 +784,57 @@
 								<onclick>-</onclick>
 								<icon>backgrounds/help.jpg</icon>
 								<thumb>backgrounds/help.jpg</thumb>
+							</item>
+							
+							<!-- default for Confluence, Mediterran -->
+							<item id="1">
+								<label>3</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/video_confluence.jpg</icon>
+								<thumb>backgrounds/video_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="10">
+								<label>20342</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/movies_confluence.jpg</icon>
+								<thumb>backgrounds/movies_confluence.jpg</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="11">
+								<label>20343</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/tv_confluence.jpg</icon>
+								<thumb>backgrounds/tv_confluence.jpg</thumb>
+								<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows) + [Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="2">
+								<label>2</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/music_confluence.jpg</icon>
+								<thumb>backgrounds/music_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="3">
+								<label>1</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/pictures_confluence.jpg</icon>
+								<thumb>backgrounds/pictures_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="5">
+								<label>8</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/weather_confluence.jpg</icon>
+								<thumb>backgrounds/weather_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
+							</item>
+							<item id="7">
+								<label>5</label>
+								<onclick>-</onclick>
+								<icon>backgrounds/settings_confluence.jpg</icon>
+								<thumb>backgrounds/settings_confluence.jpg</thumb>
+								<visible>[Skin.HasTheme(Confluence) | Skin.HasTheme(Mediterran)]</visible>
 							</item>
 						</content>
 					</control>
@@ -2252,6 +2340,297 @@
 						</control>
 					</control>
 				</control>
+				
+				<!-- Video osd settings -->
+				<control type="group" id="9050">
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<posx>290</posx>
+					<posy>60</posy>
+					<width>750</width>
+					<height>60</height>
+					<itemgap>-1</itemgap>
+					<pagecontrol>-</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<control type="label" id="500">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>45</height>
+						<font>font13caps_title</font>
+						<label>31131</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="button" id="501">
+						<description>Menu Item Next Button</description>
+						<posx>570</posx>
+						<posy>53</posy>
+						<width>33</width>
+						<height>22</height>
+						<label>-</label>
+						<font>-</font>
+						<texturenofocus>scroll-down-2.png</texturenofocus>
+						<texturefocus>scroll-down-focus-2.png</texturefocus>
+						<onclick>Control.Move(9051,1)</onclick>
+						<onleft>9000</onleft>
+						<onright>502</onright>
+						<onup>9050</onup>
+						<ondown>510</ondown>
+					</control>
+					<control type="button" id="502">
+						<description>Menu Item Prev Button</description>
+						<posx>603</posx>
+						<posy>53</posy>
+						<width>33</width>
+						<height>22</height>
+						<label>-</label>
+						<font>-</font>
+						<texturenofocus>scroll-up-2.png</texturenofocus>
+						<texturefocus>scroll-up-focus-2.png</texturefocus>
+						<onclick>Control.Move(9051,-1)</onclick>
+						<onright>510</onright>
+						<onleft>501</onleft>
+						<onup>9050</onup>
+						<ondown>510</ondown>
+					</control>
+					<control type="group" id="510">
+						<posx>350</posx>
+						<posy>-160</posy>
+						<control type="button" id="511">
+							<visible>Container(9051).HasFocus(1)</visible>
+							<description>Default Image button</description>
+							<width>100</width>
+							<height>40</height>
+							<label>Set</label>
+							<font>font12caps_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.Reset(videoosdRedux)</onclick>
+							<onclick>Skin.Reset(videoosdConfluence)</onclick>
+							<onclick>Skin.Reset(videoosdClassic)</onclick>
+							<onclick>Skin.Reset(videoosdMinimalistic)</onclick>
+							<onleft>502</onleft>
+							<onright>9050</onright>
+							<onup>9050</onup>
+							<ondown>9050</ondown>
+						</control>
+						
+						<control type="button" id="512">
+							<visible>Container(9051).HasFocus(2)</visible>
+							<description>Default Image button</description>
+							<width>100</width>
+							<height>40</height>
+							<label>Set</label>
+							<font>font12caps_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.SetBool(videoosdRedux)</onclick>
+							<onclick>Skin.Reset(videoosdConfluence)</onclick>
+							<onclick>Skin.Reset(videoosdClassic)</onclick>
+							<onclick>Skin.Reset(videoosdMinimalistic)</onclick>
+							<onleft>502</onleft>
+							<onright>9050</onright>
+							<onup>9050</onup>
+							<ondown>9050</ondown>
+						</control>
+						
+						<control type="button" id="513">
+							<visible>Container(9051).HasFocus(3)</visible>
+							<description>Default Image button</description>
+							<width>100</width>
+							<height>40</height>
+							<label>Set</label>
+							<font>font12caps_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.Reset(videoosdRedux)</onclick>
+							<onclick>Skin.SetBool(videoosdConfluence)</onclick>
+							<onclick>Skin.Reset(videoosdClassic)</onclick>
+							<onclick>Skin.Reset(videoosdMinimalistic)</onclick>
+							<onleft>502</onleft>
+							<onright>9050</onright>
+							<onup>9050</onup>
+							<ondown>9050</ondown>
+						</control>
+						
+						<control type="button" id="514">
+							<visible>Container(9051).HasFocus(4)</visible>
+							<description>Default Image button</description>
+							<width>100</width>
+							<height>40</height>
+							<label>Set</label>
+							<font>font12caps_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.Reset(videoosdRedux)</onclick>
+							<onclick>Skin.Reset(videoosdConfluence)</onclick>
+							<onclick>Skin.SetBool(videoosdClassic)</onclick>
+							<onclick>Skin.Reset(videoosdMinimalistic)</onclick>
+							<onleft>502</onleft>
+							<onright>9050</onright>
+							<onup>9050</onup>
+							<ondown>9050</ondown>
+						</control>
+						
+						<control type="button" id="515">
+							<visible>Container(9051).HasFocus(5)</visible>
+							<description>Default Image button</description>
+							<width>100</width>
+							<height>40</height>
+							<label>Set</label>
+							<font>font12caps_title</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>center</align>
+							<texturenofocus border="5">button-nofocus.png</texturenofocus>
+							<texturefocus border="5">button-focus.png</texturefocus>
+							<onclick>Skin.Reset(videoosdRedux)</onclick>
+							<onclick>Skin.Reset(videoosdConfluence)</onclick>
+							<onclick>Skin.Reset(videoosdClassic)</onclick>
+							<onclick>Skin.SetBool(videoosdMinimalistic)</onclick>
+							<onleft>502</onleft>
+							<onright>9050</onright>
+							<onup>9050</onup>
+							<ondown>9050</ondown>
+						</control>
+					</control>
+					<control type="list" id="9051">
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>650</width>
+						<height>40</height>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>9051</onup>
+						<ondown>9051</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="1" width="750">
+						</itemlayout>
+						<focusedlayout height="40" width="750">
+							<control type="image">
+								<posx>0</posx>
+								<posy>45</posy>
+								<width>650</width>
+								<height>40</height>
+								<texture>MenuItemNF.png</texture>
+								<visible>![Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>650</width>
+								<height>40</height>
+								<texture>MenuItemFO.png</texture>
+								<visible>[Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>500</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$LOCALIZE[31130]</label>
+								<visible>![Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>500</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>white</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$LOCALIZE[31130]</label>
+								<visible>[Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+							<control type="label">
+								<posx>550</posx>
+								<posy>0</posy>
+								<width>540</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>grey2</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>![Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+							<control type="label">
+								<posx>550</posx>
+								<posy>0</posy>
+								<width>540</width>
+								<height>40</height>
+								<font>font13</font>
+								<textcolor>white</textcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>[Control.HasFocus(501) | Control.HasFocus(502)]</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<!-- skin default -->
+							<item id="1">
+								<label>31701</label>
+								<onclick>-</onclick>
+								<icon>osd_default.png</icon>
+							</item>
+
+							<!-- redux -->
+							<item id="2">
+								<label>31702</label>
+								<onclick>-</onclick>
+								<icon>osd_default.png</icon>
+							</item>
+							
+							<!-- confluence new -->
+							<item id="3">
+								<label>31703</label>
+								<onclick>-</onclick>
+								<icon>osd_default.png</icon>
+							</item>
+							
+							<!-- confluence classic -->
+							<item id="4">
+								<label>31704</label>
+								<onclick>-</onclick>
+								<icon>osd_default.png</icon>
+							</item>
+							
+							<!-- minimalistic -->
+							<item id="5">
+								<label>31705</label>
+								<onclick>-</onclick>
+								<icon>osd_default.png</icon>
+							</item>
+						</content>
+					</control>
+				
+				</control>
+				
+				
 				<control type="scrollbar" id="61">
 					<posx>1060</posx>
 					<posy>60</posy>
