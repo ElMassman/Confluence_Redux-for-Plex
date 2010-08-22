@@ -455,7 +455,7 @@
 					<ondown>9014</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
-					<control type="button" id="90141">
+					<!--control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31603</label>
 						<onclick>ActivateWindow(Scripts)</onclick>
@@ -469,7 +469,7 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>13200</label>
 						<onclick>ActivateWindow(Profiles)</onclick>
-					</control>
+					</control-->
 					<control type="button" id="90144">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20077</label>

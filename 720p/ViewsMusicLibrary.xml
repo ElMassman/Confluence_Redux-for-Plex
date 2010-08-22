@@ -740,7 +740,7 @@
 					<posy>360</posy>
 					<width>400</width>
 					<align>center</align>
-					<itemgap>0</itemgap>
+					<itemgap>8</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>

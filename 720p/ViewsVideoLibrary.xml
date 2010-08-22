@@ -183,7 +183,7 @@
 				<posy>645</posy>
 				<width>1280</width>
 				<align>center</align>
-				<itemgap>0</itemgap>
+				<itemgap>8</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
@@ -432,7 +432,7 @@
 			<posy>70</posy>
 			<visible>Control.IsVisible(502)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="largeimage">
+			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>300</width>
@@ -564,7 +564,7 @@
 				<posy>375</posy>
 				<width>800</width>
 				<align>left</align>
-				<itemgap>0</itemgap>
+				<itemgap>8</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>AudioCodecFlaggingConditions</include>
@@ -726,7 +726,7 @@
 				<posy>215</posy>
 				<width>290</width>
 				<align>right</align>
-				<itemgap>0</itemgap>
+				<itemgap>8</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VideoCodecFlaggingConditions</include>
 				<include>VideoTypeHackFlaggingConditions</include>
@@ -737,7 +737,7 @@
 				<posy>215</posy>
 				<width>290</width>
 				<align>left</align>
-				<itemgap>0</itemgap>
+				<itemgap>8</itemgap>
 				<orientation>horizontal</orientation>
 				<include>AudioCodecFlaggingConditions</include>
 			</control>
@@ -1334,7 +1334,7 @@
 					<posy>220</posy>
 					<width>600</width>
 					<align>left</align>
-					<itemgap>0</itemgap>
+					<itemgap>8</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
@@ -1405,7 +1405,7 @@
 					<posy>480</posy>
 					<width>590</width>
 					<align>center</align>
-					<itemgap>0</itemgap>
+					<itemgap>8</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
@@ -1626,7 +1626,7 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
@@ -1938,7 +1938,7 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
@@ -1981,7 +1981,7 @@
 						<posy>170</posy>
 						<width>600</width>
 						<align>center</align>
-						<itemgap>0</itemgap>
+						<itemgap>8</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VideoCodecFlaggingConditions</include>
 						<include>AudioCodecFlaggingConditions</include>
@@ -2072,7 +2072,7 @@
 						<posy>140</posy>
 						<width>600</width>
 						<align>center</align>
-						<itemgap>0</itemgap>
+						<itemgap>8</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VideoCodecFlaggingConditions</include>
 						<include>AudioCodecFlaggingConditions</include>
@@ -2249,7 +2249,7 @@
 						<posy>160</posy>
 						<width>600</width>
 						<align>center</align>
-						<itemgap>0</itemgap>
+						<itemgap>8</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VideoCodecFlaggingConditions</include>
 						<include>AudioCodecFlaggingConditions</include>
@@ -2508,7 +2508,7 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
@@ -2665,6 +2665,20 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
+					<control type="grouplist">
+						<description>Media Codec Flagging Images</description>
+						<posx>150</posx>
+						<posy>400</posy>
+						<width>600</width>
+						<align>center</align>
+						<itemgap>8</itemgap>
+						<orientation>horizontal</orientation>
+						<include>VideoCodecFlaggingConditions</include>
+						<include>AudioCodecFlaggingConditions</include>
+						<include>AspectCodecFlaggingConditions</include>
+						<include>VideoTypeHackFlaggingConditions</include>
+					</control>
+
 				</control>
 			</control>
 		</control>
@@ -2764,7 +2778,7 @@
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="largeimage">
+				<control type="image">
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>600</width>
